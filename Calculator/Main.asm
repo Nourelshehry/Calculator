@@ -25,7 +25,22 @@ start :
 
 loop1 :                     ;while loop
   cmp ebp, ecx              ;compare ebp  register (index) with ecx register (string length)
-  jae answer                ;if (ebp >= ecx) then jump to label answer  
+  jae answer                ;if (ebp >= ecx) then jump to label answer
+  
+digit : 
+  cmp buffer[ebp],'0'
+  jb switch                
+  cmp buffer[ebp],'9'
+  ja switch                  
+  mov bl,buffer[ebp]
+  sub bl,'0'
+  movzx ebx, bl
+  mov ax ,10
+  mul nr
+  add eax , ebx
+  mov nr , eax
+  inc ebp
+  jmp digit
 
 
 INVOKE ExitProcess, 0
