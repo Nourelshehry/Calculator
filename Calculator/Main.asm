@@ -15,7 +15,17 @@ aux    DWORD 0            ; store the number that will be multiplied or divided
 .code
 main PROC
 
+start : 
+  mov edx, offset msg
+  call WriteString
+  mov edx, offset buffer
+  mov ecx, sizeof buffer
+  call ReadString
+  mov ebp,0
 
+loop1 :
+  cmp ebp, ecx
+  jae answer
 
 
 INVOKE ExitProcess, 0
