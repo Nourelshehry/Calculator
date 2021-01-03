@@ -16,3 +16,13 @@ result DWORD 0
 aux    DWORD 0            ; store the number that will be multiplied or divided
 
 
+.code
+main PROC
+
+
+
+
+INVOKE ExitProcess, 0
+
+main ENDP
+END main
