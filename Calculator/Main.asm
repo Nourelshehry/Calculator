@@ -3,7 +3,7 @@ INCLUDE Irvine32.inc
 .data
    ;variables
 msg byte "insert the expression:",0 
-msg1 byte "=",0
+msg1 byte " result =",0
 buffer byte 30 DUP(0)  ;array to get string from user          
 sign   WORD 1            ;the sign of the number
 nr     DWORD 0             
