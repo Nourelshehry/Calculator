@@ -8,7 +8,7 @@ We take an expression from user as a string, and then we deal with all numerical
 
  
 
-Firstly, we make a cpp code which deal with all functions that we need, after that we turn every instruction to assembly by help of reference: assembly language for x86 processors, which were a really helpful to deal with **jmp**, **cmp** function
+Firstly, we make a cpp code which deal with all functions that we need, after that we turn every instruction to assembly by help of reference: **assembly language for x86 processors**, which were a really helpful to deal with **jmp**, **cmp** function
 
 **Example of our usage:** 
 
@@ -38,3 +38,26 @@ If it’s 2, so it indicates that there’s a division operation, for that it’
 
  
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Resources:**
+
+[Assembly Language for x86 Processors, 6th Edition](https://www.pearson.com/uk/educators/higher-education-educators/program/Irvine-Assembly-Language-for-x-86-Processors-6th-Edition/PGM965305.html)
+
+[prentice the intel microprocessors, 8th edition](https://userpages.umbc.edu/~squire/intel_book.pdf)
+
+[c++ code](https://github.com/Microprocessor-project-calculator/Calculator/blob/master/Calculator/Calculator.cpp)
