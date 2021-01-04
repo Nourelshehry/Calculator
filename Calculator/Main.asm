@@ -43,14 +43,14 @@ digit :
   jmp digit                  ;jump to get the second number like (123)
   
 switch : 
-  cmp buffer[ebp],'+'
-  je addition
-  cmp buffer[ebp],'-'
-  je subtraction
-  cmp buffer[ebp],'*'
-  je multiplication
-  cmp buffer[ebp],'/'
-  je Division
+   cmp buffer[ebp],'+'        
+   je addition               ;jump if v[i]=='+'
+   cmp buffer[ebp],'-'
+   je subtraction            ;jump if v[i]=='-'
+   cmp buffer[ebp],'*'
+   je multiplication         ;jump if v[i]=='*'
+   cmp buffer[ebp],'/'
+   je Division               ;jump if v[i]=='/'
 
 
 INVOKE ExitProcess, 0
