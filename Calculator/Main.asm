@@ -69,6 +69,19 @@ switch :
               mov nr, 0
               mov co, 0
               jmp psign
+              
+              
+  default : mov eax,ecx
+             sub eax,1
+             cmp ebp,eax
+             jb incre
+             cmp co, 1
+             jne dco2
+             mov ax,sign
+             mul nr
+             mul aux
+             add result,eax
+             jmp answer
 
 
 INVOKE ExitProcess, 0
