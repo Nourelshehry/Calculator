@@ -5,7 +5,7 @@ INCLUDE Irvine32.inc
 msg byte "insert the expression:",0 
 msg1 byte " result =",0
 buffer byte 30 DUP(0)  ;array to get string from user          
-sign   WORD 1            ;the sign of the number
+sign   DWORD 1            ;the sign of the number
 nr     DWORD 0             
 co     WORD 0              ; flag to know the operation (multiplication  or Division)
 result DWORD 0         
@@ -16,6 +16,8 @@ aux    DWORD 0            ; store the number that will be multiplied or divided
 main PROC
 
 start : 
+  mov sign,1
+  mov result,0
   mov edx, offset msg        ;get the offest of the variable msg
   call WriteString           ;print the text in the variable msg to the user
   mov edx, offset buffer     ;get the offest of buffer
