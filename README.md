@@ -3,10 +3,17 @@ This is our mini calculator project, it’s made to deal with all mathematical o
 We take an expression from user as a string, and then we deal with all numerical and characters in this expression. 
 
 **The input and output example**: 
+
+![first](https://user-images.githubusercontent.com/76706477/103562678-210d2c00-4ec4-11eb-97d8-91fcfb832c7f.jpg)
+
  
 
-Firstly, we make a cpp code which deal with all functions that we need, after that we turn every instruction to assembly by help of reference: assembly language for x86 processors, which were a really helpful to deal with jmp, cmp functions: 
-Example of our usage: 
+Firstly, we make a cpp code which deal with all functions that we need, after that we turn every instruction to assembly by help of reference: assembly language for x86 processors, which were a really helpful to deal with **jmp**, **cmp** function
+
+**Example of our usage:** 
+
+![photo6023569634550199601](https://user-images.githubusercontent.com/76706477/103562904-8cef9480-4ec4-11eb-8606-6cbf9d46fb2b.jpg)
+
  
 
 **To make a good understanding about our project:**
@@ -26,5 +33,8 @@ If it’s 2, so it indicates that there’s a division operation, for that it’
 **“aux”** it’s hold the number after multiplication/division operation. 
 
 **“nr”** is hold the number changes during operation.
+
+![photo6023569634550199600](https://user-images.githubusercontent.com/76706477/103562836-67fb2180-4ec4-11eb-90bf-ff9ce5898a1f.jpg)
+
  
 
