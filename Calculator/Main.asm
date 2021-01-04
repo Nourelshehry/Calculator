@@ -41,6 +41,16 @@ digit :
   mov nr , eax               ;nr=nr*10 + (v[i]-'0')
   inc ebp                    ;i++ => ebp++
   jmp digit                  ;jump to get the second number like (123)
+  
+switch : 
+  cmp buffer[ebp],'+'
+  je addition
+  cmp buffer[ebp],'-'
+  je subtraction
+  cmp buffer[ebp],'*'
+  je multiplication
+  cmp buffer[ebp],'/'
+  je Division
 
 
 INVOKE ExitProcess, 0
