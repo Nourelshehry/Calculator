@@ -55,6 +55,22 @@ switch :
    je Division               ;jump if v[i]=='/'
 
 
+ addition : cmp buffer[ebp-1],'*'
+              je psign
+              cmp buffer[ebp-1],'/'
+              je psign
+              cmp co, 1
+              jne aco2
+              mov eax,sign
+              mul nr
+              mul aux
+              add result,eax
+              mov aux, 0
+              mov nr, 0
+              mov co, 0
+              jmp psign
+
+
 INVOKE ExitProcess, 0
 
 main ENDP
