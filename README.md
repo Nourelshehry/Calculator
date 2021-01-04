@@ -16,12 +16,12 @@ Firstly, we make a cpp code which deal with all functions that we need, after th
 
  
 
-**To make a good understanding about our project:**
+# To make a good understanding about our project:
 >note that: String can’t be held as it is in assembly code, so we made a **“buffer”** which is array of 30 bytes, which held the expression that user entered. 
 
 >note also:The Epb is a (base pointer) register which we use to point to byte by byte in the expression which user enter -Which held in buffer- . 
 
-**Notice also these labels:**
+**Notice these labels:**
 
 **“Sign”** is represent if the number is positive: represented by 1. Or negative: represented by -1.
 
@@ -36,9 +36,24 @@ If it’s 2, so it indicates that there’s a division operation, for that it’
 
 ![photo6023569634550199600](https://user-images.githubusercontent.com/76706477/103562836-67fb2180-4ec4-11eb-90bf-ff9ce5898a1f.jpg)
 
- 
+ # Overview:
+**In code**:
+we use ***start*** to represent the `infinite loop` in which user can use the program to write expression more than one time, by `jmp` to this label at the ***answer*** section at the end of program:
+**Entering more than one expression:
+
+![e12547d6-e81d-4c1d-a7d6-2d6458692a17](https://user-images.githubusercontent.com/76706477/103569534-27a1a080-4ed0-11eb-90de-41cb8b5884af.jpg)
+
+***Loop1*** and ***digit*** sections are indicating functions which check the number of digits which entered by user and seperate digit by digit, recognise that in this section we used a special `mov` which is `movzx` to mix size of 32bit register and 16bit register:
 
 
+![4eeb0392-f1df-49bd-b542-a1dd437cfc7f](https://user-images.githubusercontent.com/76706477/103569674-659ec480-4ed0-11eb-8e13-b2922d7fc7ee.jpg)
+
+
+after that, we have ***switch*** section in which we check if entered symbol is: '+','-','\*','/' or other.
+Depending on the entered symbol we `je` to required label: ***addition***, ***substraction***, ***multiplication*** or ***Division***
+There's also ***psign*** and ***nsign*** labels which indicates positive and negative sign.
+in ***incre*** we only increment the value of **Ebp** register by one to move to next digit.
+finally, in ***answer*** section we `mov` the final value to the result and show it and return to begin to retry all the program again to make user able to write many expressions as he wanted.
 
 
 
