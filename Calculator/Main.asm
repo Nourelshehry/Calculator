@@ -55,16 +55,16 @@ switch :
    je Division               ;jump if v[i]=='/'
 
 
- addition : cmp buffer[ebp-1],'*'
-              je psign
+ addition : cmp buffer[ebp-1],'*'            
+              je psign                        ;jump  to label psing if buffer[ebp] == '*'
               cmp buffer[ebp-1],'/'
-              je psign
+              je psign                        ;jump  to label psing if buffer[ebp] == '/'
               cmp co, 1
-              jne aco2
-              mov eax,sign
-              mul nr
-              mul aux
-              add result,eax
+              jne aco2                        ;jump  to label aco2 if buffer[ebp] != 1 
+              mov eax,sign                   
+              mul nr                          ;nr * eax (sign)
+              mul aux                         ;eax * aux
+              add result,eax                  ;result += eax
               mov aux, 0
               mov nr, 0
               mov co, 0
