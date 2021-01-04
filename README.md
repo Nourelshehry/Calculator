@@ -23,16 +23,16 @@ Firstly, we make a cpp code which deal with all functions that we need, after th
 
 **Notice these labels:**
 
-**“Sign”** is represent if the number is positive: represented by 1. Or negative: represented by -1.
+**Sign** is represent if the number is positive: represented by 1. Or negative: represented by -1.
 
-**“result”** held the answer of entered expression, after doing all entered operations, so it’s DWord: 4bytes.
+**result** held the answer of entered expression, after doing all entered operations, so it’s DWord: 4bytes.
 
-**“Co”** only represented by 1 or 2, which indicates that if co is 1, then there’s multiplication operation. 
+**Co** only represented by 1 or 2, which indicates that if co is 1, then there’s multiplication operation. 
 If it’s 2, so it indicates that there’s a division operation, for that it’s only 2 bytes: a word. 
 
-**“aux”** it’s hold the number after multiplication/division operation. 
+**aux** it’s hold the number after multiplication/division operation. 
 
-**“nr”** is hold the number changes during operation.
+**nr** is hold the number changes during operation.
 
 ![photo6023569634550199600](https://user-images.githubusercontent.com/76706477/103562836-67fb2180-4ec4-11eb-90bf-ff9ce5898a1f.jpg)
 
